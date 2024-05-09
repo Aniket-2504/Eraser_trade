@@ -35,10 +35,10 @@ function DashboardLayout(
   return (
     <div>
       <div className='grid grid-cols-4'>
-          <div>
+          <div className='h-screen w-72 fixed'>
           <SideNav/>
           </div>
-          <div className='grid grid-cols-3'>
+          <div className='col-span-4 ml-72'>
           {children}
           </div>
         </div>

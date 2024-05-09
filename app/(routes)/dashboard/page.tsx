@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { LogoutLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import React, { useEffect } from 'react'
 import { useConvex, useMutation, useQuery } from 'convex/react'
+import Header from './_components/Header'
 
 
 function dashboard() {
@@ -41,14 +42,8 @@ const createUser=useMutation(api.user.createUser);
         }
       }
    return (
-    
-    <div>
-<Button>
-<LogoutLink>Logout</LogoutLink>
-
-</Button>
-
-      
+    <div className='p-8'>
+  <Header/>
     </div>
   )
 }
