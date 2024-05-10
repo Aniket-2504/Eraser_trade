@@ -6,6 +6,7 @@ import { LogoutLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import React, { useEffect } from 'react'
 import { useConvex, useMutation, useQuery } from 'convex/react'
 import Header from './_components/Header'
+import FileList from './_components/FileList'
 
 
 function dashboard() {
@@ -44,6 +45,8 @@ const createUser=useMutation(api.user.createUser);
    return (
     <div className='p-8'>
   <Header/>
+
+  <FileList/>
     </div>
   )
 }

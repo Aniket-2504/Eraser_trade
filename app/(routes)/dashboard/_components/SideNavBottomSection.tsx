@@ -40,7 +40,7 @@ function SideNavBottomSection({onFileCreate,totalFiles}:any) {
   return (
     <div>
       {menuList.map((menu,index)=> (
-        <h2 className='flex gap-2 p-1 px-2text-[14px] 
+        <h2 key={index} className='flex gap-2 p-1 px-2text-[14px] 
         hover:bg-gray-100  rounded-md cursor-pointer '>
           <menu.icon className='h-5 w-5'/>
           {menu.name}</h2>
