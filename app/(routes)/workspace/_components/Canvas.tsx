@@ -28,7 +28,7 @@ function Canvas({onSaveTrigger,fileId,fileData}:{onSaveTrigger:any,fileId:any,fi
     }}
     onChange={(excalidrawElements, appState, files) => setWhiteBoardData(excalidrawElements)}
     UIOptions={{
-      canvasActions:{
+      canvasActions:{ 
         saveToActiveFile:false,
         loadScene:false,
         export:false,

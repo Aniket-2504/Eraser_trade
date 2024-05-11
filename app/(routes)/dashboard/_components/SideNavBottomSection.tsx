@@ -12,6 +12,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Input } from '@/components/ui/input'
+import Constant from '@/app/_constant/Constant'
+import PricingDialog from './PricingDialog'
 
 
 function SideNavBottomSection({onFileCreate,totalFiles}:any) {
@@ -52,7 +54,8 @@ function SideNavBottomSection({onFileCreate,totalFiles}:any) {
   <DialogTrigger className='w-full ' asChild> 
   <Button className='w-full bg-blue-500 hover:bg-blue-700 justify-start mt-3'>New File </Button>
   </DialogTrigger>
-  <DialogContent>
+   {totalFiles<Constant.MAX_FREE_FILES? 
+   <DialogContent>
     <DialogHeader>
       <DialogTitle>Create New File</DialogTitle>
       <DialogDescription>
@@ -71,7 +74,8 @@ function SideNavBottomSection({onFileCreate,totalFiles}:any) {
         </Button>
       </DialogClose>
     </DialogFooter>
-  </DialogContent>
+  </DialogContent>:
+  <PricingDialog/>}
 </Dialog>
 
 
@@ -86,7 +90,7 @@ function SideNavBottomSection({onFileCreate,totalFiles}:any) {
      </div>
      </div>
 
-    <h2 className='text-[15px] mt-3'> <strong>{totalFiles}</strong>out of<strong>5</strong> files is use </h2>
+    <h2 className='text-[15px] mt-3'> <strong>{totalFiles}</strong>out of<strong>{Constant.MAX_FREE_FILES}</strong> files is use </h2>
     <h2 className='text-[13px] mt-1 '> upgrade your plan for unlimited files </h2>
     </div>
   )
