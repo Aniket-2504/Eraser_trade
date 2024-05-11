@@ -33,6 +33,20 @@ export const getFiles=query({
     },
 })
 
+export const updatewhiteboard=mutation({
+    args:{
+        _id:v.id('files'),
+        whiteboard:v.string() 
+    },
+    handler:async(ctx, args)=>{
+        const result =await ctx.db.patch(args._id,{whiteboard:args.whiteboard});
+        return result;
+        
+    }, 
+})
+
+
+
 export const updateDocument=mutation({
     args:{
         _id:v.id('files'),
@@ -44,6 +58,7 @@ export const updateDocument=mutation({
         
     },
 })
+
 
 
 export const getFileById=query({
