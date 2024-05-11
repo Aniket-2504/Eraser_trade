@@ -39,17 +39,17 @@ width={200}
 height={100}/>
 
 <div className='flex flex-col items-center mt-8'>
-  <h2 className='font-bold text-[40px] py-3'>Create your workspace</h2>
+  <h2 className='font-bold text-[40px] py-3'>Create your Team</h2>
   <h2 className='text-gray-500'>You can change this anytime </h2>
   <div className='mt-7 w-[40%]'>
-    <label className='text-gray-400'>Work Space Name </label>
-    <Input placeholder='Workspace Name ' className='mt-3 '
+    <label className='text-gray-400'>Team Name </label>
+    <Input placeholder='Team Name ' className='mt-3 '
     onChange={(e)=>setTeamName(e.target.value)}/>
   </div>
   <Button className='bg-blue-500 mt-9 w-[30%] hover:bg-blue-700'
   disabled={!(teamName&&teamName?.length>0)}
   onClick={()=>createNewTeam()}
-  > Create Workspace </Button>
+  > Create Team</Button>
 </div>
     </div>
   )
