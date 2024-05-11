@@ -89,7 +89,7 @@ function Editor({onSaveTrigger,fileId,fileData}:{onSaveTrigger:any,fileId:any,fi
             ref.current=editor;
         
     }
-
+ 
     const onSaveDocument=()=>{
         if(ref.current)
             {
